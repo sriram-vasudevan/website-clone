@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --font-serif: 'IBM Plex Serif', 'Times New Roman', serif;
+    --font-mono: 'IBM Plex Mono', 'Menlo', 'Monaco', monospace;
+    --foreground-default: #222;
+    --foreground-light: #778;
+    --background-default: #f8f8f8;
+    --background-block: #eee;
+}
+
+html {
+    font-size: 18px;
+    line-height: 1.6111;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--foreground-default);
+    background: var(--background-default);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+main {
+    flex-shrink: 0;
+    width: calc(100% - 6em);
+    padding: 0 1em;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+}
+
+a {
+    color: var(--foreground-default);
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    padding-bottom: .125rem;
+}
+
+.hero h1 {
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p, li {
+    margin: 0.7em 0;
+}
+
+li a, p a {
+    text-decoration: none;
+    padding: 0 3px;
+    background: rgba(0, 0, 0, .1);
+}
+
+header {
+    height: 100px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header, nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.home {
+    font-weight: bold;
+    margin-right: 24px;
+}
+
+nav a {
+    margin-right: 12px;
+}
+
+.hero {
+    padding-top: 32px;
+    margin-bottom: 36px;
+}
+
+.work-item {
+    margin-bottom: 20px;
+}
+
+.work {
+    color: var(--foreground-default);
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        max-width: 780px;
+        margin: 2em auto;
+        padding: 0 2em;
+    }
+
+    h1, h2, h3 {
+        margin-top: 1em;
+        margin-bottom: .5em;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    main {
+        margin: 0;
+        max-width: unset;
+        width: calc(100% - 2em);
+        background: initial;
+        box-shadow: none;
+    }
+}
+
+article {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+article h1 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+article h2 {
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+article p {
+    margin-bottom: 0.7em;
+}
+
+article img.responsive {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
